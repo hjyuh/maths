@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Study Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Math Study Portal</h1>
+            <p class="subtitle">Your comprehensive mathematics learning resource</p>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-btn active" data-view="browse">Browse Notes</button>
+            <button class="nav-btn" data-view="practice">Practice Tests</button>
+        </nav>
+
+        <!-- Browse Notes View -->
+        <div id="browse-view" class="view active">
+            <aside class="sidebar">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search topics...">
+                </div>
+                <div class="subject-list" id="subject-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </aside>
+            <main class="content">
+                <div id="notes-content" class="markdown-content">
+                    <div class="welcome">
+                        <h2>Welcome to Math Study Portal</h2>
+                        <p>Select a topic from the sidebar to view notes, or switch to Practice Tests to test your knowledge.</p>
+                        <div class="stats">
+                            <div class="stat-card">
+                                <h3 id="total-topics">0</h3>
+                                <p>Topics Available</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 id="total-tests">0</h3>
+                                <p>Practice Tests</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Practice Tests View -->
+        <div id="practice-view" class="view">
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h3>Select Subject</h3>
+                    <select id="subject-filter" class="filter-select">
+                        <option value="">All Subjects</option>
+                    </select>
+                </div>
+                <div class="test-list" id="test-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </aside>
+            <main class="content">
+                <div id="test-content" class="test-container">
+                    <div class="welcome">
+                        <h2>Practice Tests</h2>
+                        <p>Select a test from the sidebar to begin practicing.</p>
+                        <div class="test-info">
+                            <h3>Test Features:</h3>
+                            <ul>
+                                <li>View complete practice problems and final tests</li>
+                                <li>All questions formatted for easy reading</li>
+                                <li>Navigate between different subjects and units</li>
+                                <li>Track your progress as you study</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
